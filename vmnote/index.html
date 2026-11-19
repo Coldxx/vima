@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VM Note: cardápio digital com pedido no WhatsApp | ViMa</title>
+<meta name="description" content="O cardápio da sua loja num link. O cliente monta o pedido e ele chega pronto no WhatsApp da loja, sem comissão. Tem plano grátis. Feito pela ViMa, em Macaé.">
+<link rel="canonical" href="https://coldxx.github.io/vima/vmnote/">
+<meta name="theme-color" content="#05070f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="ViMa">
+<meta property="og:title" content="VM Note: o pedido chega pronto no seu WhatsApp, sem comissão">
+<meta property="og:description" content="Cardápio digital da sua loja num link, com fotos, preços e pizza de dois sabores. O pedido chega pronto no WhatsApp. Tem plano grátis. Feito pela ViMa, em Macaé.">
+<meta property="og:url" content="https://coldxx.github.io/vima/vmnote/">
+<meta property="og:image" content="https://coldxx.github.io/vima/vmnote/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/estilo-v2.css">
+</head>
+<body>
+<a class="pular" href="#chega">Pular para o conteúdo</a>
+
+<!-- o céu: azul-noite, aurora lenta e grade de pontinhos (só enfeite) -->
+<div class="ceu" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i></div>
+<canvas class="particulas" aria-hidden="true"></canvas>
+
+<header class="barra" id="barra">
+  <div class="barra-dentro">
+    <!-- a página mora dentro do site da ViMa (coldxx.github.io/vima/vmnote/): a logo leva para o site da ViMa -->
+    <div class="marca">
+      <a class="marca-vima" href="../" title="Um produto da ViMa"><img src="assets/vima-logo-branca.png" width="439" height="249" alt="ViMa, site da agência"></a>
+      <a class="marca-nome" href="#topo">VM Note</a>
+    </div>
+    <nav class="barra-nav" aria-label="Nesta página">
+      <a href="#chega">Como chega</a>
+      <a href="#faz">Recursos</a>
+      <a href="#conta">Conta do iFood</a>
+      <a href="#planos">Planos</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="botao brilho pequeno" href="https://wa.me/5522999984849?text=Oi!%20Quero%20o%20VM%20Note%20para%20a%20minha%20loja." target="_blank" rel="noopener">Quero o VM Note</a>
+  </div>
+</header>
+
+<main>
+
+<!-- TOPO -->
+<section class="heroi" id="topo" aria-labelledby="heroi-t">
+  <div class="heroi-txt">
+    <a class="selo-vidro selo-link" href="../" data-revela><i class="ponto-vivo"></i>VM Note · um produto da ViMa</a>
+    <h1 id="heroi-t" data-revela>O pedido chega pronto no seu WhatsApp. <span class="grad">Sem comissão.</span></h1>
+    <p class="lead" data-revela>O cardápio da sua loja num link. O cliente escolhe, monta e manda, e a loja recebe o pedido completo no WhatsApp que já usa. Comece grátis.</p>
+    <div class="acoes" data-revela>
+      <a class="botao brilho" href="https://wa.me/5522999984849?text=Oi!%20Quero%20o%20VM%20Note%20para%20a%20minha%20loja." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3Z"/></svg><span>Quero o VM Note</span></a>
+      <a class="botao vidro" href="#chega"><span>Ver como funciona</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    </div>
+    <ul class="chips" aria-label="Em resumo" data-revela>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sem baixar aplicativo</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sem taxa por pedido</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sem taxa de montagem</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Plano grátis</li>
+    </ul>
+  </div>
+
+  <div class="palco" data-revela>
+    <div class="flutua">
+      <div class="celular" id="celular">
+        <div class="tela">
+          <iframe src="exemplo/" title="Cardápio de exemplo da pizzaria Forno da Praça, que é inventada" loading="eager"></iframe>
+        </div>
+        <a class="testar" href="exemplo/" data-abrir-exemplo><span>Toque para testar</span></a>
+        <i class="reflexo" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="bolha b1" aria-hidden="true">
+      <span class="bolha-ic laranja"><svg class="ic" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2Z"/><path d="M9 8h6M9 12h6"/></svg></span>
+      <span><b>Novo pedido · Forno da Praça</b><small>R$ 73,90 · entrega</small></span>
+    </div>
+    <div class="bolha b2" aria-hidden="true">
+      <span class="bolha-ic verde"><svg class="ic" viewBox="0 0 24 24"><path d="m2 13 4 4 9-10M10 16l1 1 9-10"/></svg></span>
+      <span><b>Pedido chegou no WhatsApp ✓✓</b><small>agora</small></span>
+    </div>
+    <div class="bolha b3" aria-hidden="true">
+      <span class="bolha-ic lima"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3v18M17 6.5c0-1.4-2.2-2.5-5-2.5S7 5.1 7 7s2 2.6 5 3.2 5 1.6 5 3.6-2.2 3.2-5 3.2-5-1.2-5-2.7"/></svg></span>
+      <span><b>Sem comissão</b><small>nem taxa por pedido</small></span>
+    </div>
+    <p class="palco-nota">Teste o cardápio de exemplo: a pizzaria é inventada e o pedido não vai para ninguém.</p>
+  </div>
+</section>
+
+<!-- ONDE O LINK VAI -->
+<section class="onde" aria-label="Onde o link vai">
+  <p class="onde-t">Onde o link vai</p>
+  <div class="onde-trilho">
+    <ul>
+      <li>Na bio do Instagram</li>
+      <li>No Google</li>
+      <li>No status do WhatsApp</li>
+      <li>No QR code da mesa</li>
+      <li>Na conversa com o cliente</li>
+    </ul>
+    <ul aria-hidden="true">
+      <li>Na bio do Instagram</li>
+      <li>No Google</li>
+      <li>No status do WhatsApp</li>
+      <li>No QR code da mesa</li>
+      <li>Na conversa com o cliente</li>
+    </ul>
+  </div>
+</section>
+
+<!-- COMO O PEDIDO CHEGA -->
+<section class="secao chega" id="chega" aria-labelledby="chega-t">
+  <div class="cab">
+    <p class="selo-vidro" data-revela>Na loja</p>
+    <h2 id="chega-t" data-revela>Como o pedido chega</h2>
+    <p data-revela>Com tudo o que a cozinha e o entregador precisam: itens, observação, total, endereço, pagamento e troco. Ninguém anota nada por telefone.</p>
+  </div>
+
+  <div class="chega-grade">
+    <div class="zap vidro-forte" id="zap" data-revela>
+      <div class="zap-topo">
+        <span class="avatar" aria-hidden="true">C</span>
+        <span class="zap-quem"><b>Carla</b><small>pelo cardápio digital</small></span>
+        <span class="zap-on"><i></i>online</span>
+      </div>
+      <div class="zap-fundo">
+        <div class="digitando" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="balao" id="balao">
+          <div class="balao-txt" id="balao-txt" aria-live="polite"><span class="lin"><b>Novo pedido · Forno da Praça</b></span><span class="lin"> </span><span class="lin">1x Pizza grande · 1/2 Calabresa + 1/2 Margherita · Borda de catupiry — R$ 59,90</span><span class="lin"><i>   obs.: sem cebola</i></span><span class="lin">1x Refrigerante 2 L · Cola — R$ 14,00</span><span class="lin"> </span><span class="lin"><b>Total dos itens: R$ 73,90</b></span><span class="lin">Taxa de entrega: a combinar</span><span class="lin"> </span><span class="lin"><b>Entrega</b></span><span class="lin">Av. Atlântica, 1200, apto 302, Cavaleiros</span><span class="lin">Pagamento: Dinheiro (troco para R$ 100)</span><span class="lin">Nome: Carla</span><span class="lin"> </span><span class="lin">Pedido feito pelo cardápio digital</span></div>
+          <span class="hora" id="hora">20:15</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="controles vidro-forte" aria-label="Monte o pedido de exemplo" onsubmit="return false" data-revela>
+      <p class="controles-t">Monte o pedido de exemplo</p>
+      <div class="linha-c">
+        <span id="r-pizza">Pizza grande, meio a meio</span>
+        <span class="passo" role="group" aria-labelledby="r-pizza">
+          <button type="button" data-menos="pizza" aria-label="Uma pizza a menos">−</button>
+          <output data-qtd="pizza">1</output>
+          <button type="button" data-mais="pizza" aria-label="Uma pizza a mais">+</button>
+        </span>
+      </div>
+      <label class="linha-c"><span>Borda de catupiry</span><input type="checkbox" class="chave" data-campo="borda" checked></label>
+      <label class="linha-c"><span>Sem cebola</span><input type="checkbox" class="chave" data-campo="obs" checked></label>
+      <div class="linha-c">
+        <span id="r-refri">Refrigerante 2 L</span>
+        <span class="passo" role="group" aria-labelledby="r-refri">
+          <button type="button" data-menos="refri" aria-label="Um refrigerante a menos">−</button>
+          <output data-qtd="refri">1</output>
+          <button type="button" data-mais="refri" aria-label="Um refrigerante a mais">+</button>
+        </span>
+      </div>
+      <div class="linha-c">
+        <span id="r-tipo">Receber</span>
+        <span class="seg" role="group" aria-labelledby="r-tipo">
+          <button type="button" data-tipo="entrega" aria-pressed="true">Entrega</button>
+          <button type="button" data-tipo="retirada" aria-pressed="false">Retirada</button>
+        </span>
+      </div>
+      <label class="linha-c"><span>Pagamento</span>
+        <select data-campo="pag"><option>Pix</option><option>Cartão</option><option selected>Dinheiro</option></select>
+      </label>
+      <label class="linha-c" data-so-dinheiro><span>Troco para</span>
+        <select data-campo="troco"><option value="">Sem troco</option><option value="100" selected>R$ 100</option><option value="150">R$ 150</option><option value="200">R$ 200</option></select>
+      </label>
+      <a class="link-seta" href="#topo" data-abrir-exemplo>Montar outro pedido no cardápio <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </form>
+  </div>
+  <p class="nota-centro" data-revela>Mude um item e veja a mensagem mudar. É o mesmo texto que o cardápio manda para a loja.</p>
+</section>
+
+<!-- O QUE O CARDÁPIO FAZ -->
+<section class="secao faz" id="faz" aria-labelledby="faz-t">
+  <div class="cab">
+    <p class="selo-vidro" data-revela>Para o cliente</p>
+    <h2 id="faz-t" data-revela>O que o cardápio faz</h2>
+    <p data-revela>Tudo pensado para o celular: o cliente abre o link, escolhe e manda. Sem baixar nada.</p>
+  </div>
+
+  <div class="bento">
+    <article class="cartao c-video" data-tilt data-revela>
+      <div class="cartao-cab">
+        <span class="icone laranja"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="13" height="14" rx="3"/><path d="m16 10 5-3v10l-5-3"/></svg></span>
+        <span class="novo">Plano Ouro</span>
+      </div>
+      <h3>Cardápio em vídeo</h3>
+      <p>O cliente vê o prato sendo feito, como nos Stories, em tela cheia no celular.</p>
+      <div class="story" aria-hidden="true">
+        <div class="story-barras"><i class="cheia"></i><i class="enchendo"></i><i></i></div>
+        <div class="story-luz"></div>
+        <span class="story-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7Z" fill="currentColor"/></svg></span>
+        <span class="story-leg"><b>Calabresa</b> saindo do forno</span>
+      </div>
+    </article>
+
+    <article class="cartao c-pizza" data-tilt data-revela>
+      <div class="cartao-cab">
+        <span class="icone lima"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><circle cx="8" cy="10" r=".8" fill="currentColor"/><circle cx="16" cy="14" r=".8" fill="currentColor"/></svg></span>
+      </div>
+      <h3>Pizza meio a meio</h3>
+      <p>Tamanho, até 2 sabores e borda, com contador. Vale o preço do sabor mais caro.</p>
+      <div class="print" aria-hidden="true">
+        <img src="assets/img/pizza-dois-sabores.webp" width="780" height="1688" alt="" loading="lazy" decoding="async">
+        <span class="contador"><b>2</b> de 2 sabores</span>
+      </div>
+    </article>
+
+    <article class="cartao c-status" data-tilt data-revela>
+      <div class="cartao-cab">
+        <span class="icone esmeralda"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+      </div>
+      <h3>Aberto ou fechado, sozinho</h3>
+      <p>Pelo horário da loja. Fora dele, aparece a hora que abre.</p>
+      <div class="mini" aria-hidden="true"><span class="pilula-status"><i></i><span data-status>Aberto agora · até 23h30</span></span></div>
+    </article>
+
+    <article class="cartao c-cara" data-tilt data-revela>
+      <div class="cartao-cab">
+        <span class="icone lima"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></span>
+      </div>
+      <h3>A cara da sua loja</h3>
+      <p>Fundo claro ou escuro, a letra, a vitrine de fotos, sua logo e suas cores. Sem marca de outra empresa no link.</p>
+      <div class="mini temas" aria-hidden="true">
+        <span class="tema claro"><b>Aa</b><i></i><i></i><i></i></span>
+        <span class="tema escuro"><b>Aa</b><i></i><i></i><i></i></span>
+      </div>
+    </article>
+
+    <article class="cartao c-pequeno" data-tilt data-revela>
+      <div class="cartao-cab">
+        <span class="icone laranja"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2Z"/><path d="M9 8h6M9 12h6"/></svg></span>
+      </div>
+      <h3>O total na hora</h3>
+      <p>Sem conta de cabeça.</p>
+      <div class="mini" aria-hidden="true"><span class="barra-pedido"><b>2</b>Ver meu pedido<span>R$ 73,90</span></span></div>
+    </article>
+
+    <article class="cartao c-pequeno" data-tilt data-revela>
+      <div class="cartao-cab">
+        <span class="icone esmeralda"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg></span>
+      </div>
+      <h3>Sem cadastro</h3>
+      <p>Sem conta e sem senha.</p>
+      <div class="mini" aria-hidden="true"><span class="riscos"><s>Criar conta</s><s>Senha</s></span></div>
+    </article>
+
+    <article class="cartao c-pequeno" data-tilt data-revela>
+      <div class="cartao-cab">
+        <span class="icone lima"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+      </div>
+      <h3>Entrega ou retirada</h3>
+      <p>Com endereço, pagamento e troco.</p>
+      <div class="mini" aria-hidden="true"><span class="seg-mini"><span class="on">Entrega</span><span>Retirada</span></span></div>
+    </article>
+
+    <article class="cartao c-pequeno" data-tilt data-revela>
+      <div class="cartao-cab">
+        <span class="icone laranja"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+      </div>
+      <h3>Busca</h3>
+      <p>O cliente digita e acha o sabor.</p>
+      <div class="mini" aria-hidden="true"><span class="busca-mini"><span class="campo-b">calab<i></i></span><span class="achado">Calabresa</span></span></div>
+    </article>
+  </div>
+</section>
+
+<!-- A CONTA DO IFOOD -->
+<section class="secao conta" id="conta" aria-labelledby="conta-t">
+  <div class="conta-painel vidro-forte" data-revela>
+    <div class="conta-entrada">
+      <p class="selo-vidro">Faça a conta</p>
+      <h2 id="conta-t">A conta do iFood</h2>
+      <label class="venda" for="venda-n">Quanto a loja vende por mês no iFood?</label>
+      <span class="venda-num"><span aria-hidden="true">R$</span><input id="venda-n" type="text" inputmode="numeric" autocomplete="off" value="10.000" aria-describedby="venda-ajuda"></span>
+      <input type="range" id="venda-r" min="1000" max="60000" step="500" value="10000" aria-label="Venda por mês no iFood, em reais">
+      <p id="venda-ajuda" class="miudo">Arraste ou digite o valor. A conta é feita aqui, nada é enviado.</p>
+    </div>
+
+    <div class="cifras">
+      <div class="cifra c-ifood">
+        <p class="cifra-n"><span data-c="min">R$ 1.200</span> <span class="ate">a <span data-c="max">R$ 2.700</span></span></p>
+        <p class="cifra-l">por mês vão para o iFood em comissão. A taxa vai de 12% a 27% do pedido, conforme o plano da loja. Confira no seu contrato.</p>
+      </div>
+      <div class="cifra c-vm">
+        <p class="cifra-n">R$ 49</p>
+        <p class="cifra-l">por mês no VM Note Prata, o plano recomendado, venda quanto vender.</p>
+      </div>
+      <div class="cifra c-ano">
+        <p class="cifra-n"><span data-c="ano">R$ 13.812</span></p>
+        <p class="cifra-l">a menos por ano, se esses pedidos viessem pelo seu link. A conta usa a taxa mais baixa e já desconta os R$ 49.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="secao como" id="como" aria-labelledby="como-t">
+  <div class="cab">
+    <p class="selo-vidro" data-revela>Em 3 passos</p>
+    <h2 id="como-t" data-revela>Como funciona</h2>
+  </div>
+  <ol class="passos">
+    <li class="passo-c" data-revela>
+      <span class="no" aria-hidden="true">1</span>
+      <div class="passo-cartao">
+        <div class="passo-vis" aria-hidden="true">
+          <div class="zap-c">
+            <div class="msg sai">
+              <div class="papel"><b>Forno da Praça</b><span>Calabresa <i>49,90</i></span><span>Margherita <i>47,90</i></span><span>Portuguesa <i>52,90</i></span></div>
+              Segue o cardápio da pizzaria
+            </div>
+            <div class="msg entra">Recebido! Amanhã te mando o link para conferir.</div>
+          </div>
+        </div>
+        <h3>Você manda</h3>
+        <p>A foto do cardápio ou o link do iFood, no WhatsApp da ViMa.</p>
+      </div>
+    </li>
+    <li class="passo-c" data-revela>
+      <span class="no" aria-hidden="true">2</span>
+      <div class="passo-cartao">
+        <div class="passo-vis foto" aria-hidden="true">
+          <img src="assets/img/cardapio-topo.webp" width="780" height="1688" alt="" loading="lazy" decoding="async">
+        </div>
+        <h3>Você confere</h3>
+        <p>O cardápio fica pronto e você confere cada preço.</p>
+      </div>
+    </li>
+    <li class="passo-c" data-revela>
+      <span class="no" aria-hidden="true">3</span>
+      <div class="passo-cartao">
+        <div class="passo-vis" aria-hidden="true">
+          <div class="previa"><b>Forno da Praça · Cardápio</b><span>Cardápio da pizzaria Forno da Praça em Macaé. Escolha e peça pelo WhatsApp.</span></div>
+          <ul class="lugares"><li>Bio do Instagram</li><li>Google</li><li>Status</li><li>QR code na mesa</li></ul>
+        </div>
+        <h3>O link vai para o ar</h3>
+        <p>Na bio, no Google, no status e na mesa.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- PLANOS -->
+<section class="secao planos" id="planos" aria-labelledby="planos-t">
+  <div class="cab">
+    <p class="selo-vidro" data-revela>Planos</p>
+    <h2 id="planos-t" data-revela>Escolha o seu plano</h2>
+    <p data-revela>Todos com o pedido pronto no WhatsApp e sem taxa por pedido. Sem taxa de montagem: é só a mensalidade.</p>
+  </div>
+
+  <div class="planos-abas" role="group" aria-label="Ir para o plano" data-revela>
+    <button type="button" data-ir="0">Free</button>
+    <button type="button" data-ir="1">Bronze</button>
+    <button type="button" data-ir="2">Prata</button>
+    <button type="button" data-ir="3">Ouro</button>
+  </div>
+
+  <div class="planos-trilho" id="planos-trilho" data-revela>
+    <article class="plano" data-tilt>
+      <p class="plano-nome"><span class="medalha m-free" aria-hidden="true"></span>Free</p>
+      <h3 class="promessa">Comece hoje, de graça</h3>
+      <p class="preco"><b>R$ 0</b></p>
+      <ul class="lista-ok">
+        <li>Até 30 itens no cardápio.</li>
+        <li>Pedido pronto no WhatsApp.</li>
+        <li>Pizza por tamanho e meio a meio.</li>
+        <li>Aberto ou fechado automático.</li>
+      </ul>
+      <p class="nota-plano">Com o selo "Feito com VM Note".</p>
+      <a class="botao vidro largo" href="https://wa.me/5522999984849?text=Oi!%20Quero%20come%C3%A7ar%20o%20VM%20Note%20gr%C3%A1tis." target="_blank" rel="noopener">Começar grátis</a>
+    </article>
+
+    <article class="plano" data-tilt>
+      <p class="plano-nome"><span class="medalha m-bronze" aria-hidden="true"></span>Bronze</p>
+      <h3 class="promessa">Venda sem limite</h3>
+      <p class="preco"><b>R$ 29</b> <span>por mês</span></p>
+      <p class="anterior">Tudo do Free +</p>
+      <ul class="lista-ok">
+        <li>Itens ilimitados, com fotos.</li>
+        <li>Taxa de entrega por bairro e pedido mínimo.</li>
+        <li>QR code para mesa e balcão.</li>
+        <li>Sem o selo do VM Note.</li>
+      </ul>
+      <a class="botao vidro largo" href="https://wa.me/5522999984849?text=Oi!%20Quero%20o%20VM%20Note%20no%20plano%20Bronze%20(R%24%2029%20por%20m%C3%AAs)." target="_blank" rel="noopener">Quero o Bronze</a>
+    </article>
+
+    <article class="plano destaque" data-tilt>
+      <p class="selo-reco"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z"/></svg>Recomendado</p>
+      <p class="plano-nome"><span class="medalha m-prata" aria-hidden="true"></span>Prata</p>
+      <h3 class="promessa">Com a sua cara, montado pela IA</h3>
+      <p class="preco"><b>R$ 49</b> <span>por mês</span></p>
+      <p class="anterior">Tudo do Bronze +</p>
+      <ul class="lista-ok">
+        <li>A IA monta o cardápio pela foto e atualiza quando você manda uma mensagem.</li>
+        <li>Visual premium: vitrine de fotos, fundo escuro, letras, animações e pratos em tela cheia.</li>
+        <li>Pix copia e cola já com o valor do pedido.</li>
+        <li>Cupom de desconto.</li>
+      </ul>
+      <a class="botao brilho largo" href="https://wa.me/5522999984849?text=Oi!%20Quero%20o%20VM%20Note%20no%20plano%20Prata%20(R%24%2049%20por%20m%C3%AAs)." target="_blank" rel="noopener">Quero o Prata</a>
+    </article>
+
+    <article class="plano" data-tilt>
+      <p class="plano-nome"><span class="medalha m-ouro" aria-hidden="true"></span>Ouro</p>
+      <h3 class="promessa">Cardápio em vídeo</h3>
+      <p class="preco"><b>R$ 89</b> <span>por mês</span></p>
+      <p class="anterior">Tudo do Prata +</p>
+      <ul class="lista-ok">
+        <li>Seus pratos em vídeo, tocando como nos Stories.</li>
+        <li>A ViMa faz as trocas de preço e de item.</li>
+        <li>Suporte prioritário no WhatsApp.</li>
+      </ul>
+      <p class="em-breve"><span>Em breve</span>Relatório do mês e domínio próprio.</p>
+      <a class="botao vidro largo" href="https://wa.me/5522999984849?text=Oi!%20Quero%20o%20VM%20Note%20no%20plano%20Ouro%20(R%24%2089%20por%20m%C3%AAs)." target="_blank" rel="noopener">Quero o Ouro</a>
+    </article>
+  </div>
+
+  <article class="plano platina" data-revela>
+    <div class="platina-txt">
+      <p class="selo-quente"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.5"/></svg>Fotos e vídeos gravados pela ViMa</p>
+      <p class="plano-nome"><span class="medalha m-platina" aria-hidden="true"></span>Platina</p>
+      <h3 class="promessa">A ViMa cuida de tudo</h3>
+      <p class="preco"><b>Sob consulta</b> <span>a partir de R$ 300/mês · montado sob medida para a sua loja</span></p>
+      <p class="platina-nota">Junta os outros serviços da ViMa no pacote certo para a sua loja. O valor final depende do pacote.</p>
+      <a class="botao brilho quente" href="https://wa.me/5522999984849?text=Oi!%20Quero%20o%20VM%20Note%20Platina%2C%20sob%20medida%20para%20a%20minha%20loja." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3Z"/></svg><span>Falar com a ViMa</span></a>
+    </div>
+    <div class="platina-dir">
+      <p class="anterior">Tudo do Ouro +</p>
+      <ul class="lista-ok platina-lista">
+        <li>Gravamos as fotos e os vídeos dos seus pratos.</li>
+        <li>Reels para o seu Instagram.</li>
+        <li>Google Meu Negócio ligado ao cardápio.</li>
+        <li>QR code e materiais impressos.</li>
+        <li>Atendimento direto com o Vinícius e a Mariana.</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="secao duvidas" id="duvidas" aria-labelledby="duvidas-t">
+  <div class="cab">
+    <p class="selo-vidro" data-revela>Perguntas</p>
+    <h2 id="duvidas-t" data-revela>Dúvidas</h2>
+  </div>
+  <div class="lista-d">
+    <details name="duvida" open data-revela>
+      <summary>Meu cliente precisa baixar aplicativo?</summary>
+      <p>Não. Ele abre o link no celular, escolhe e manda. Funciona no navegador, e a loja recebe no WhatsApp que já usa.</p>
+    </details>
+    <details name="duvida" data-revela>
+      <summary>Dá para usar junto com o iFood?</summary>
+      <p>Dá. Você continua no iFood para quem te acha por lá e passa o seu link para quem já é cliente: na bio, no status e na mesa. Nesses pedidos não tem comissão.</p>
+    </details>
+    <details name="duvida" data-revela>
+      <summary>Posso mudar preço ou item depois?</summary>
+      <p>Pode, e o link continua o mesmo. No Prata, a IA atualiza quando você manda uma mensagem. No Ouro e no Platina, é só pedir no WhatsApp que a ViMa faz a troca para você.</p>
+    </details>
+    <details name="duvida" data-revela>
+      <summary>Quanto tempo leva para ficar pronto?</summary>
+      <p>Com a IA (Prata e Ouro), até 24 horas depois que a gente recebe a foto do cardápio. No Platina, o prazo depende da gravação das fotos e dos vídeos, que a gente marca com você.</p>
+    </details>
+    <details name="duvida" data-revela>
+      <summary>Tem fidelidade?</summary>
+      <p>No Free, no Bronze, no Prata e no Ouro, não: você cancela quando quiser. No Platina, o mínimo é de 6 meses, porque a gente grava as fotos e os vídeos dos seus pratos logo no começo.</p>
+    </details>
+    <details name="duvida" data-revela>
+      <summary>Como o cliente paga?</summary>
+      <p>Do jeito que a loja já recebe: Pix, cartão na entrega ou dinheiro. O pedido avisa a forma de pagamento e, se for em dinheiro, o troco. A partir do Prata, o cliente recebe o Pix copia e cola já com o valor do pedido.</p>
+    </details>
+    <details name="duvida" data-revela>
+      <summary>E a entrega?</summary>
+      <p>Continua com a loja. O pedido chega com o endereço completo, e o cliente também pode escolher retirar no local. A partir do Bronze, dá para cobrar a taxa de entrega por bairro e definir um pedido mínimo.</p>
+    </details>
+    <details name="duvida" data-revela>
+      <summary>Tem taxa por pedido?</summary>
+      <p>Não. Você paga só a mensalidade do plano, com 10 ou com 500 pedidos.</p>
+    </details>
+    <details name="duvida" data-revela>
+      <summary>Tem taxa de montagem?</summary>
+      <p>Não. Todos os planos são só por mensalidade, e o Free não custa nada.</p>
+    </details>
+  </div>
+</section>
+
+<!-- CHAMADA FINAL -->
+<section class="secao final" aria-labelledby="final-t">
+  <div class="final-painel vidro-forte" data-revela>
+    <h2 id="final-t">Pedido direto no seu WhatsApp, <span class="grad">sem comissão.</span></h2>
+    <p>Comece grátis ou escolha um plano. É só chamar a ViMa no WhatsApp com a foto do cardápio.</p>
+    <div class="acoes centro">
+      <a class="botao brilho" href="https://wa.me/5522999984849?text=Oi!%20Quero%20o%20VM%20Note%20para%20a%20minha%20loja." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3Z"/></svg><span>Quero o VM Note</span></a>
+      <a class="botao vidro" href="#planos"><span>Ver os planos</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="rodape-dentro">
+    <div class="r-marca">
+      <a class="r-logo" href="../" title="Um produto da ViMa"><img src="assets/vima-logo-branca.png" width="439" height="249" alt="ViMa, site da agência" loading="lazy" decoding="async"></a>
+      <p>VM Note é o cardápio digital da ViMa, de Macaé. <a href="../">Um produto da ViMa</a>.</p>
+      <a class="r-servicos" href="../">Conheça os outros serviços da ViMa <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <small>A ViMa é a agência de Vinícius e Mariana. 2026.</small>
+    </div>
+    <nav class="r-nav" aria-label="Rodapé">
+      <p class="r-t">Nesta página</p>
+      <ul>
+        <li><a href="#chega">Como o pedido chega</a></li>
+        <li><a href="#conta">A conta do iFood</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+      </ul>
+    </nav>
+    <div class="r-contato">
+      <p class="r-t">Fale com a ViMa</p>
+      <a href="https://wa.me/5522999984849?text=Oi!%20Quero%20o%20VM%20Note%20para%20a%20minha%20loja." target="_blank" rel="noopener">WhatsApp (22) 99998-4849</a>
+      <a href="https://instagram.com/projetovima" target="_blank" rel="noopener">Instagram @projetovima</a>
+      <span>Macaé, Rio das Ostras e região</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="tela-cheia" id="tela-cheia" aria-label="Cardápio de exemplo em tela cheia">
+  <div class="tela-cheia-barra">
+    <span>Forno da Praça (exemplo)</span>
+    <button type="button" data-fechar>Voltar</button>
+  </div>
+  <iframe title="Cardápio de exemplo em tela cheia" data-src="exemplo/"></iframe>
+</dialog>
+
+<script src="assets/pagina-v2.js" defer></script>
+</body>
+</html>
